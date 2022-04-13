@@ -1,0 +1,57 @@
+.navbar-css{
+
+    background-color:#2F4454;
+    overflow: hidden;
+}
+.navbar-css a{
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar-css a:hover{
+    background-color:#3f5f77;
+}
+
+.field, .title{
+    padding: 5px;
+    display: table;
+    margin: auto;
+}
+.myBtn {
+    padding: 5px;
+    display: table;
+    margin: auto;
+    width: 100px;
+
+
+    
+}
+.formtxt{
+
+    width: 350px;
+    height: 40px;
+}
+html{
+
+    background-color: #2F4454;
+}
+
+
+
+
+.loginform, .signform{
+    padding: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+
+
+
