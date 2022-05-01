@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="signform">
-    <h3 class="title">Sign Up</h3>
+    <h3 class="titleS">Sign Up</h3>
     <div class="box">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -16,23 +16,23 @@
         <form method="POST" action="/signup">
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
+                    <input class="formtxt" type="email" name="email" placeholder="Email" autofocus="">
                 </div>
             </div>
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
+                    <input class="formtxt" type="text" name="name" placeholder="Name" autofocus="">
                 </div>
             </div>
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="password" name="password" placeholder="Password">
+                    <input class="formtxt" type="password" name="password" placeholder="Password">
                 </div>
             </div>
 
-            <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+            <button class="myBtn">Sign Up</button>
         </form>
     </div>
 </div>

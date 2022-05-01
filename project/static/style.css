@@ -1,21 +1,30 @@
-.navbar-css{
-
-    background-color:#2F4454;
-    overflow: hidden;
+.flex-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.navbar-css a{
-    float: right;
+nav a{
+
+    padding: 14px 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
 }
-.navbar-css a:hover{
-    background-color:#3f5f77;
+nav a:hover{
+    background-color: #3f5f77;
+}
+.logo a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px; 
+    margin-left: 20px;
 }
 
-.field, .title{
+
+
+.field, .titleS, .titleL{
     padding: 5px;
     display: table;
     margin: auto;
@@ -25,9 +34,12 @@
     display: table;
     margin: auto;
     width: 100px;
+      
+}
+.myBtn:hover{
 
-
-    
+    background-color: #2F4454;
+    color: white;
 }
 .formtxt{
 
@@ -53,6 +65,36 @@ html{
     
     
 }
+.notification{
+
+    background-color:orangered ;
+    text-align: center;
+    border:black;
+    border-style:dashed;
+    border-width: 1.5px;
+}
+.title, .subtitle{
+
+    text-align: center  ;
+    color: white
+}
+
+
+
+.img-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+ .grid{
+     padding: 0 20px 20px;
+ }
+
 
 
 
