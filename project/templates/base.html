@@ -13,9 +13,10 @@
 
 <body>
     <section>
+        
         <div class="flex-navbar">
             <div class="logo">
-                <h1><a href="{{ url_for('main.index') }}">Logo</a></h1>
+                <h1><a href="{{ url_for('main.index') }}"><img height=75px width=55px src="/static/Logo.png"></a></h1>
             </div>
             <nav>
                 <a href="{{ url_for('main.index') }}" class="navbar-item">
@@ -40,6 +41,7 @@
                 </a>
                 {% endif %}
             </nav>
+        </div>
     </section>
 </body>
 

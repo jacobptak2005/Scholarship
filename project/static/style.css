@@ -2,9 +2,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-nav a{
+    background-color: #a6967c;
+    height: 87px;
+    right:0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 
+
+}
+
+nav a{
+    
     padding: 14px 16px;
     color: white;
     text-align: center;
@@ -48,7 +57,11 @@ nav a:hover{
 }
 html{
 
-    background-color: #2F4454;
+    background-color: #eedfcc;
+    background-image: url("/static/dog-transparent.png");
+    background-size: cover;
+    
+
 }
 
 
@@ -91,9 +104,14 @@ html{
 }
 
 
- .grid{
+ .image{
      padding: 0 20px 20px;
  }
+
+ .index{
+     margin-top: 175px;
+ }
+
 
 
 
