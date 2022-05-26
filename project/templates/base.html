@@ -23,14 +23,21 @@
                     Home
                 </a>
                 {% if current_user.is_authenticated %}
-                <a href="{{ url_for('main.profile') }}" class="navbar-item">
-                    Profile
-                </a>
+                <div class="dropdown">
+                    <a href="{{ url_for('main.profile') }}" class="navbar-item">
+                        Profile
+                    </a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('main.edit_profile') }}">Edit</a>
+                            
+                        </div>
+                </div>  
                 {% endif %}
                 {% if not current_user.is_authenticated %}
                 <a href="{{ url_for('auth.login') }}" class="navbar-item">
                     Login
                 </a>
+                        
                 <a href="{{ url_for('auth.signup') }}" class="navbar-item">
                     Sign Up
                 </a>
@@ -42,6 +49,7 @@
                 {% endif %}
             </nav>
         </div>
+
     </section>
 </body>
 

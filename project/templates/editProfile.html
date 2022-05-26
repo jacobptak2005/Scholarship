@@ -1,0 +1,34 @@
+{% include "base.html" %}
+
+{% block content %}
+
+
+
+<form method="POST" action="/profile/edit">
+    <div class="editBox">
+    <h1 class="titleP">Welcome to Edit Profile</h1>
+
+        <div class="txtPadding">
+            <label class="editLabel">Name</label>
+            <input class="formtxtE" type="name" name="name" value={{name}}>
+        </div>
+        <div class="txtPadding">
+            <label class="editLabel">Email</label>
+
+            <input class="formtxtE" type="email" name="email" value={{email}}>
+        </div>
+        <div class="txtPadding">
+            <label class="editLabel">Password</label>
+            <input class="formtxtE" type="name" name="name" placeholder="Current Password">
+            
+
+        </div>
+        <div class="txtPadding">
+
+            <input class="formtxtE" type="name" name="name" placeholder="New Password">
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}

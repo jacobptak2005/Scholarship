@@ -4,9 +4,20 @@
 
 {% block content %}
 <html>
+<script type="text/javascript">
+
+    var reswidth = screen.width;
+
+    if (reswidth < 1050){
+        document.getElementById("loginform").style.left = "50%";
+    }
+
+ 
+
+</script>
 
 <body>
-<div class="loginform">
+<div id="loginform" class="loginform">
         <h3 class="titleL">Login</h3>
             <div class="box">
                 {% with messages = get_flashed_messages() %}

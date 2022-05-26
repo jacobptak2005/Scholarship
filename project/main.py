@@ -13,3 +13,8 @@ def index():
 @login_required
 def profile():
     return render_template('profile.html', name=current_user.name)
+
+@main.route('/profile/edit')
+@login_required
+def edit_profile():
+    return render_template('editProfile.html', name=current_user.name, email=current_user.email)

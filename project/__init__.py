@@ -7,6 +7,9 @@ from flask_login import LoginManager
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
 
+
+
+
 def create_app():
     app = Flask(__name__, template_folder='./templates')
 
