@@ -59,6 +59,9 @@ nav a:hover{
     background-color: #a6967d;
     color: white;
 }
+.editButton{
+    margin: auto;
+}
 .formtxt{
 
     width: 425px;
@@ -166,7 +169,7 @@ html{
 
   }
 
-  .editBox{
+  .editForm{
 
     padding: 15px;
     margin: 0;
@@ -177,6 +180,13 @@ html{
     transform: translate(-50%, -50%);
     
 
+  }
+  .editButton{
+     height: 30px;
+     width: 75px;
+     
+    
+     background-color:#a6967d;
   }
 
   .editLabel, .formtxtE{
