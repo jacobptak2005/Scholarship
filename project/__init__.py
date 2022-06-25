@@ -8,8 +8,6 @@ from flask_login import LoginManager
 db = SQLAlchemy()
 
 
-
-
 def create_app():
     app = Flask(__name__, template_folder='./templates')
 
