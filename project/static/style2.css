@@ -16,11 +16,14 @@
   background: #a3977f;
   z-index: 100;
   transition: all 0.5s ease;
+  
 }
 /*Width of side nav when closed*/
 .sidebar.close{
   width: 78px;
 }
+
+
 .sidebar .logo-details{
   height: 60px;
   width: 100%;
@@ -39,8 +42,7 @@
   font-size: 22px;
   color: #fff;
   font-weight: 600;
-  transition: 0.3s ease;
-  transition-delay: 0.1s;
+  transition: 0.1s;
 }
 /* So they domt see the logo name when nav bar is closed*/
 .sidebar.close .logo-details .logo_name{
@@ -112,7 +114,7 @@
 }
 .sidebar .nav-links li a .link_name{
   font-size: 18px;
-  font-weight: 400;
+  font-weight: '400';
   color: #fff;
   transition: all 0.4s ease;
 }
@@ -166,6 +168,7 @@
   opacity: 1;
   display: block;
 }
+
 .sidebar .nav-links li .sub-menu.blank{
   opacity: 1;
   pointer-events: auto;
@@ -274,4 +277,10 @@
     width: 100%;
     left: 0;
   }
+}
+@media (max-width: 10px){
+
+	#content{
+		display: none;
+	}
 }

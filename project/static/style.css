@@ -1,4 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger{
+    width: 35px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transform: translate(3px, 1px);
 
+
+} 
+.menu-btn__burger::before, 
+.menu-btn__burger::after{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+
+
+} 
+.menu-btn__burger::before{
+    transform: translateY(-12px);
+
+} 
+.menu-btn__burger::after{
+    transform: translateY(12px);
+
+} 
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+
+
+
+.logo-img{
+	margin-bottom: 700px;
+}
 .field, .titleS, .titleL{
     padding: 5px;
     display: table;
@@ -10,12 +73,14 @@
     display: table;
     margin: auto;
     width: 120px;
-    
-      
+    border-radius: 16px ;
+    border: none;
+    cursor: pointer;
 }
 .myBtn:hover{
 
-    background-color: #a6967d;
+    background-color: #b8a991;
+
     color: white;
 }
 .editButton{
@@ -54,12 +119,31 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    width:500px;
+    height:300px;
+    transform: translate(-53%, -50%);
     background-color: #908168;
     border: 5px solid;
     border-color: #241e21;
+    transition: all 0.7s;
     
     
+}
+.loginform .formtxt, .signform .formtxt{
+    width: 425px;
+    height: 50px;
+    transition: all 0.7s;
+}
+.loginform:hover, .signform:hover{
+    width: 550px;
+    height: 325px;
+    
+}
+.loginform:hover .formtxt, .signform:hover .formtxt{
+
+    width: 470px;
+    height: 55px;
+
 }
 .notification{
 
@@ -69,9 +153,21 @@ body{
     border-style:dashed;
     border-width: 1.5px;
 }
+
 .title, .subtitle{
+    transform: translateX(-6px);
     text-align: center  ;
     color: #241e21;
+	transition: all 0.5s ease;
+}
+@media (max-width: 1340px){
+    .title, .subtitle{
+        transform: translateX(2px); 
+    }
+}
+.title:hover, .subtitle:hover{
+    font-size: 26px;
+    transform: all 2;
 }
 
 

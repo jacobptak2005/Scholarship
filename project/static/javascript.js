@@ -1,18 +1,33 @@
-
 document.addEventListener("DOMContentLoaded",()=>{
-
-
-
-    var header = document.getElementById("navbarDIV");
-    var btns = header.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++){
-    btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-    }
+var nav1 = false;
+var nav2 = false;
+let arrow = document.querySelectorAll(".arrow");
+	for (var i = 0; i < arrow.length; i++) {
+	arrow[i].addEventListener("click", (e)=>{
+	let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+	arrowParent.classList.toggle("showMenu");
+	});
+	}
+	let sidebar = document.querySelector(".sidebar");
+	let sidebarBtn = document.querySelector(".menu-btn");
+  const menuBtn = document.querySelector('.menu-btn');
+  let menuOpen = false;
+	sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+        if(!menuOpen) {
+          menuBtn.classList.add('open');
+          menuOpen = true;
+        } else {
+          menuBtn.classList.remove('open');
+          menuOpen = false;
+        }
+        
+  
 
    
 
 })
+
+
+});
+

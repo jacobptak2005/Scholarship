@@ -21,6 +21,9 @@ def index_auth():
 def profile():
     return render_template('profile.html', name=current_user.name)
 
+@main.route('/shop')
+def shop():
+    return render_template('shop.html')
 @main.route('/profile/edit', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
