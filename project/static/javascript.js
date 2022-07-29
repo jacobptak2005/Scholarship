@@ -10,8 +10,14 @@ let arrow = document.querySelectorAll(".arrow");
 	}
 	let sidebar = document.querySelector(".sidebar");
 	let sidebarBtn = document.querySelector(".menu-btn");
+  let sidebarBtn_Y = document.querySelector('.menu-btn-Y')
   const menuBtn = document.querySelector('.menu-btn');
+  const menuBtn_Y = document.querySelector('.menu-btn-Y');
+  const close_burger = document.querySelector('.menu-btn__burger-Y');
+  const move_content = document.querySelector('.content');
+  const function_Y = document.getElementById('#nav-icon1');
   let menuOpen = false;
+  let menuOpen_Y = false;
 	sidebarBtn.addEventListener("click", ()=>{
         sidebar.classList.toggle("close");
         if(!menuOpen) {
@@ -21,11 +27,9 @@ let arrow = document.querySelectorAll(".arrow");
           menuBtn.classList.remove('open');
           menuOpen = false;
         }
-        
-  
-
-   
-
+})
+function_Y.addEventListener("click", ()=>{
+  function_Y.classList.toggle("open");
 })
 
 
