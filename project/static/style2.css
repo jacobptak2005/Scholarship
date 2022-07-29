@@ -296,9 +296,18 @@
 .sidebar .profile-details-Y{
   display: none;
 }
-
+.logout-icon{
+  display: none;
+}
 
 @media (max-width: 800px){
+  .sidebar.close .nav-links li:hover{
+    background-color: #a3977f;
+  }
+  .logout-icon{
+    display: block;
+  }
+
   .sidebar.close{
 
     height: 78px;
