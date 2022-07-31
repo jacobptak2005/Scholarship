@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.grid{
+    padding: 20px 20px;
+    width: 350px;
+    height: 275px;
+}
+.img-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo-img{
+	margin-bottom: 700px;
+}
+.field, .titleS, .titleL{
+    padding: 5px;
+    display: table;
+    margin: auto;
+    color: #241e21;
+}
+.myBtn {
+    padding: 5px;
+    display: table;
+    margin: auto;
+    width: 120px;
+    border-radius: 16px ;
+    border: none;
+    cursor: pointer;
+}
+.myBtn:hover{
+
+    background-color: #b8a991;
+
+    color: white;
+}
+.editButton{
+    margin: auto;
+}
+.formtxt{
+
+    width: 425px;
+    height: 50px;
+}
+
+.formtxtE{
+
+    width: 425px;
+    height: 50px;
+}
+
+body{
+
+    background-color:#ebdfce;
+    
+
+}
+
+.introHome, .profile_welcome{
+	padding: 15px;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+.loginform, .signform{
+    padding: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:500px;
+    height:300px;
+    transform: translate(-53%, -50%);
+    background-color: #908168;
+    border: 5px solid;
+    border-color: #241e21;
+    transition: all 0.7s;
+    
+    
+}
+.loginform .formtxt, .signform .formtxt{
+    width: 425px;
+    height: 50px;
+    transition: all 0.7s;
+}
+.loginform:hover, .signform:hover{
+    width: 550px;
+    height: 325px;
+    
+}
+.loginform:hover .formtxt, .signform:hover .formtxt{
+
+    width: 470px;
+    height: 55px;
+
+}
+.notification{
+
+    background-color:orangered ;
+    text-align: center;
+    border:black;
+    border-style:dashed;
+    border-width: 1.5px;
+}
+
+.title, .subtitle{
+    transform: translateX(-6px);
+    text-align: center  ;
+    color: #241e21;
+	transition: all 0.5s ease;
+}
+@media (max-width: 1340px){
+    .title, .subtitle{
+        transform: translateX(2px); 
+    }
+}
+.title:hover, .subtitle:hover{
+    font-size: 26px;
+    transform: all 2;
+}
+
+
+
+.img-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+
+ .image{
+     padding: 0 20px 20px;
+ }
+
+ .index{
+     margin-top: 175px;
+ }
+
+ .titleP{
+
+    margin-top: 175px;
+    text-align:center;
+ }
+ .dropdown{
+     float: left;
+    
+ }
+
+
+
+ 
+  .editForm{
+
+    padding: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: -35%;
+    transform: translate(-50%, -50%);
+    
+
+  }
+  .editButton{
+     height: 30px;
+     width: 75px;
+     
+    
+     background-color:#a6967d;
+  }
+
+  .editLabel, .formtxtE{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .editLabel{
+      font-size: 20px;
+  }
+
+  .txtPadding{
+
+    padding: 5px;
+  }
+
+  @media(max-width: 800px){
+
+    .title, .subtitle{
+        transform: translateY(150px);
+        margin-right: 65px;
+    }
+    .loginform, .signform{
+        padding: 15px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width:500px;
+        height:300px;
+        transform: translate(-58%, -50%);
+        background-color: #908168;
+        border: 5px solid;
+        border-color: #241e21;
+        transition: all 0.7s;
+    }
+
+    .img-area{
+        transform: translateY(125px);
+        margin-right: 75px;
+    }
+  }

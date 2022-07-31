@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="{{url_for('static', filename='javascript.js')}}"></script>
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+<body>
+
+	<div id = "content" class="sidebar close">	
+		<div class="logo-details">
+			<i class="fas fa-dog"></i>
+			<span class="logo_name">Pet Collect</span>
+		</div>
+		
+		<ul class="nav-links">
+			<li>
+			<a href="{{ url_for('main.index') }}" class="link_main">
+				<i class='bx bx-grid-alt' ></i>
+				<span class="link_name">Home</span>
+			</a>
+			<ul class="sub-menu blank">
+				<li><a class="link_name" href="#">Home</a></li>
+			</ul>
+			</li>
+
+			{% if current_user.is_authenticated %}
+			<li>
+			<div class="iocn-link">
+				<a href="{{ url_for('main.profile') }}" class="link_main">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<span class="link_name">Profile</span>
+				</a>
+				<i class='bx bxs-chevron-down arrow' ></i>
+			</div>
+			<ul class="sub-menu">
+				<li><a class="link_name" href="#">Profile</a></li>
+				<li><a href="{{ url_for('main.edit_profile') }}">Edit</a></li>
+			</ul>
+			</li>
+			{% endif %}
+
+			{% if not current_user.is_authenticated %}
+			<li>
+			<div class="iocn-link">
+				<a href="{{ url_for('auth.login') }}" class="link_main">
+					<i class="fa fa-sign-out" aria-hidden="true"></i>
+				<span class="link_name">Login</span>
+				</a>
+			</div>
+			<ul class="sub-menu">
+				<li><a class="link_name" href="#">Login</a></li>
+			</ul>
+			</li>
+			{% endif %}
+
+			{% if not current_user.is_authenticated %}
+			<li>
+			<a href="{{ url_for('auth.signup') }}" class="link_main">
+				<i class="fa fa-user-plus" aria-hidden="true"></i>
+				<span class="link_name">Signup</span>
+			</a>
+			<ul class="sub-menu blank">
+				<li><a class="link_name" href="#">Signup</a></li>
+			</ul>
+			</li>
+			{% endif %}
+			{% if current_user.is_authenticated %}
+			<li class="logout-icon">
+				<a href="{{ url_for('auth.logout') }}" class="link_main">
+					<i class="fa fa-sign-out" aria-hidden="true"></i>
+					<span class="link_name">Logout</span>
+				</a>
+			</li>
+			{% endif %}
+			
+			{% if current_user.is_authenticated %}
+			<div class="cont-details">
+			<div class="profile-details">
+				
+				<div class="profile-content">
+				<!--<img src="image/profile.jpg" alt="profileImg">-->
+				</div>
+				<div class="name-job">
+				<div class="profile_name">{{name}}</div>
+				<div class="job">Web Desginer</div>
+				</div>
+				<a href="{{ url_for('auth.logout') }}">
+				<span class="logout-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+				</a>
+
+			</div>
+			</div>
+			
+			{% endif %}
+
+		</ul>
+	</div>
+	<section class="home-section">
+	<div class="menu-btn">
+		<div class="menu-btn__burger"></div>
+	</div>
+
+
+

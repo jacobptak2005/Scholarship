@@ -1,0 +1,47 @@
+{% include "base.html" %}
+
+{% block content %}
+
+<div class="content">
+    <div class="editForm">
+        <form method="POST" action="/profile/edit">
+            <h1 class="titleP">Welcome to Edit Profile</h1>
+
+            <div class="txtPadding">
+                <label class="editLabel">Name</label>
+                <input class="formtxtE" type="name" name="nameEdit" value={{name}}>
+            </div>
+            <div class="txtPadding">
+                <label class="editLabel">Email</label>
+
+                <input class="formtxtE" type="email" name="emailEdit" value={{email}}>
+            </div>
+            <div class="txtPadding">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="notification">
+                            {{ messages[0] }}
+                        </div>
+                    {% endif %}
+                    {% endwith %}
+                <label class="editLabel">Password</label>
+                <input class="formtxtE" type="name" name="passwordC" placeholder="Current Password">
+                
+
+            </div>
+            <div class="txtPadding">
+
+                <input class="formtxtE" type="name" name="passwordN" placeholder="New Password">
+            </div>
+            <button class="editButton" type="submit">Confirm</button>  
+            
+        
+        
+
+        </form>
+    </div>
+</div>
+</section>
+</body>
+</html>
+{% endblock %}
